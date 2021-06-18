@@ -30,8 +30,10 @@ for arg in "$@"; do
                 echo "UPGRADING $RPMname from $iversion to $nversion"
                 read -p "Continue (y/n)?" CONT
                 if [ "$CONT" = "y" ]; then
-                    #yum clean all
-                    echo "placeholder for yum upgrade commands";
+                    $RPM=${RPM%.rpm}
+                    yum clean all
+                    yum update $RPM
+                    #echo "placeholder for yum upgrade commands";
                 else
                     echo "aborted by user";
                 fi
@@ -41,8 +43,10 @@ for arg in "$@"; do
                 echo "DOWNGRADING $RPMname from $iversion to $nversion"
                 read -p "!!!WARNING, THIS IS A DOWNGRADE!!! Continue (y/n)?" CONT
                 if [ "$CONT" = "y" ]; then
-                #yum clean all
-                    echo "placeholder for yum downgrade commands";
+                    $RPM=${RPM%.rpm}
+                    yum clean all
+                    yum downgrade $RPM
+                    #echo "placeholder for yum downgrade commands";
                 else
                     echo "aborted by user";
                 fi
