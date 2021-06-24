@@ -118,25 +118,25 @@ for arg in "$@"; do
     RPMname="vcg-central-services"
     temp_file
     elif [[ $RPM == *"vcg-security-services"* ]]; then
-    RPMname="vcg-central-services"
+    RPMname="cg-security-services"
     temp_file
     elif [[ $RPM == *"vcg-accounts"* ]]; then
-    RPMname="vcg-central-services"
+    RPMname="vcg-accounts"
     temp_file
     elif [[ $RPM == *"vcg-mas-gw"* ]]; then
-    RPMname="vcg-central-services"
+    RPMname="vcg-mas-gw"
     temp_file
     elif [[ $RPM == *"vcg-endpoint-gateway-authmodule"* ]]; then
-    RPMname="vcg-central-services"
+    RPMname="vcg-endpoint-gateway-authmodule"
     temp_file
     elif [[ $RPM == *"vcg-endpoint-jobs"* ]]; then
-    RPMname="vcg-central-services"
+    RPMname="vcg-endpoint-jobs"
     temp_file
     elif [[ $RPM == *"vcg-endpoint-service"* ]]; then
-    RPMname="vcg-central-services"
+    RPMname="vcg-endpoint-service"
     temp_file
     elif [[ $RPM == *"vcg-endpoint-tools"* ]]; then
-    RPMname="vcg-central-services"
+    RPMname="vcg-endpoint-tools"
     temp_file
     else
     echo "RPM invalid"
